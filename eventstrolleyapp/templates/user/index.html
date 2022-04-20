@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>EVENTS TROLLEY</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Events Trolley">
+    <meta name="keywords" content="Events, tickets, parties, hangout, team bonding, nightlife">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="/static/css/font-awesome.min.css">
+    <link href='/static/fontawesome/css/all.min.css' rel='stylesheet' type='text/css'>
+
+    <!--Favicon-->
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png">
+   
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="/static/css/swiper.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/js/custom.js"></script>
+</head>
+<body>
+<header class="site-header">
+    <div class="header-bar">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-10 col-lg-2 order-lg-1">
+                    <div class="site-branding">
+                        <div class="site-title">
+                            <a href="index.html"><img src="/static/images/trolleylogo.png" alt="logo"></a>
+                        </div><!-- .site-title -->
+                    </div><!-- .site-branding -->
+                </div><!-- .col -->
+
+                <div class="col-2 col-lg-7 order-3 order-lg-2">
+                    <nav class="site-navigation">
+                        <div class="hamburger-menu d-lg-none">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div><!-- .hamburger-menu -->
+
+                        <ul>
+                            <li><a href="{{url_for('homepage')}}">Home</a></li>
+                            <li><a href="{{url_for('eventspage')}}">Events</a></li>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="{{url_for('contact')}}">Contact us</a></li>
+                            <li><a href="{{url_for('blog')}}">Event blog</a></li>
+
+                        </ul>
+                    </nav><!-- .site-navigation -->
+                </div><!-- .col -->
+
+                <div class="col-lg-3 d-none d-lg-block order-2 order-lg-3">
+                    <div class="buy-tickets">
+                        <a class="btn gradient-bg" href="{{url_for('eventspage')}}">Buy Tickets</a>
+                    </div><!-- .buy-tickets -->
+                </div><!-- .col -->
+            </div><!-- .row -->
+        </div><!-- .container-fluid -->
+    </div><!-- .header-bar -->
+
+    <div class="swiper-container hero-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" data-date="2018/05/01" style="background: url('/static/images/header-bg.jpg') no-repeat">
+                <div class="hero-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col flex flex-column justify-content-center ms-5">
+                                <div class="entry-header">
+                                    <div class="countdown flex align-items-center">
+                                        <div class="countdown-holder flex align-items-baseline">
+                                            <span class="dday"></span>
+                                            <label>Days</label>
+                                        </div><!-- .countdown-holder -->
+
+                                        <div class="countdown-holder flex align-items-baseline">
+                                            <span class="dhour"></span>
+                                            <label>Hours</label>
+                                        </div><!-- .countdown-holder -->
+
+                                        <div class="countdown-holder flex align-items-baseline">
+                                            <span class="dmin"></span>
+                                            <label>Minutes</label>
+                                        </div><!-- .countdown-holder -->
+
+                                        <div class="countdown-holder flex align-items-baseline">
+                                            <span class="dsec"></span>
+                                            <label>Seconds</label>
+                                        </div><!-- .countdown-holder -->
+                                    </div><!-- .countdown -->
+
+                                    <h2 class="entry-title">Event Name <br>Get your ticket now!</h2>
+                                </div><!--- .entry-header -->
+
+                                <div class="entry-footer">
+                                    <a class="btn gradient-bg" href="{{url_for('eventspage')}}">Order here</a>
+                                </div><!-- .entry-footer" -->
+                            </div><!-- .col -->
+                        </div><!-- .container -->
+                    </div><!-- .hero-content -->
+                </div><!-- .swiper-slide -->
+            </div><!-- .swiper-wrapper -->
+
+            <div class="swiper-slide" data-date="2019/05/01" style="background: url('/static/images/header-bg.jpg') no-repeat">
+                <div class="hero-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col flex flex-column justify-content-center ms-5">
+                                <div class="entry-header">
+                                    <div class="countdown flex align-items-center">
+                                        <div class="countdown-holder flex align-items-baseline">
+                                            <span class="dday"></span>
+                                            <label>Days</label>
+                                        </div><!-- .countdown-holder -->
+
+                                        <div class="countdown-holder flex align-items-baseline">
+                                            <span class="dhour"></span>
+                                            <label>Hours</label>
+                                        </div><!-- .countdown-holder -->
+
+                                        <div class="countdown-holder flex align-items-baseline">
+                                            <span class="dmin"></span>
+                                            <label>Minutes</label>
+                                        </div><!-- .countdown-holder -->
+
+                                        <div class="countdown-holder flex align-items-baseline">
+                                            <span class="dsec"></span>
+                                            <label>Seconds</label>
+                                        </div><!-- .countdown-holder -->
+                                    </div><!-- .countdown -->
+
+                                    <h2 class="entry-title">Event name <br>Get your ticket now!</h2>
+                                </div><!--- .entry-header -->
+
+                                <div class="entry-footer">
+                                    <a class="btn gradient-bg" href="{{url_for('eventspage')}}">Order here</a>
+                                </div><!-- .entry-footer" -->
+                            </div><!-- .col -->
+                        </div><!-- .container -->
+                    </div><!-- .hero-content -->
+                </div><!-- .swiper-slide -->
+            </div><!-- .swiper-wrapper -->
+
+            <div class="swiper-slide" data-date="2020/05/01" style="background: url('/static/images/header-bg.jpg') no-repeat">
+                <div class="hero-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col flex flex-column justify-content-center ms-5">
+                                <div class="entry-header">
+                                    <div class="countdown flex align-items-center">
+                                        <div class="countdown-holder flex align-items-baseline">
+                                            <span class="dday"></span>
+                                            <label>Days</label>
+                                        </div><!-- .countdown-holder -->
+
+                                        <div class="countdown-holder flex align-items-baseline">
+                                            <span class="dhour"></span>
+                                            <label>Hours</label>
+                                        </div><!-- .countdown-holder -->
+
+                                        <div class="countdown-holder flex align-items-baseline">
+                                            <span class="dmin"></span>
+                                            <label>Minutes</label>
+                                        </div><!-- .countdown-holder -->
+
+                                        <div class="countdown-holder flex align-items-baseline">
+                                            <span class="dsec"></span>
+                                            <label>Seconds</label>
+                                        </div><!-- .countdown-holder -->
+                                    </div><!-- .countdown -->
+
+                                    <h2 class="entry-title">Event name <br>Get your ticket now!</h2>
+                                </div><!--- .entry-header -->
+
+                                <div class="entry-footer">
+                                    <a class="btn gradient-bg" href="{{url_for('eventspage')}}">Order here</a>
+                                </div><!-- .entry-footer" -->
+                            </div><!-- .col -->
+                        </div><!-- .container -->
+                    </div><!-- .hero-content -->
+                </div><!-- .swiper-slide -->
+            </div><!-- .swiper-wrapper -->
+        </div>
+
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- Add Arrows -->
+        <div class="swiper-button-next flex justify-content-center align-items-center">
+            <span><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1171 960q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23z"/></svg></span>
+        </div>
+
+        <div class="swiper-button-prev flex justify-content-center align-items-center">
+            <span><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1203 544q0 13-10 23l-393 393 393 393q10 10 10 23t-10 23l-50 50q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23z"/></svg></span>
+        </div>
+    </div><!-- .swiper-container -->
+</header><!-- .site-header -->
+
+<div class="homepage-info-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-4 col-lg-5">
+                <figure>
+                    <img src= "/static/images/e19.jpeg" alt="logo">
+                </figure>
+            </div>
+
+            <div class="col-12 col-md-8 col-lg-7">
+                <header class="entry-header">
+                    <h2 class="entry-title">Who are we and why choose our services?</h2>
+                </header>
+
+                <div class="col-12 col-md-12">
+                    <div class="tabs">
+                        <ul class="tabs-nav flex">
+                            <li class="tab-nav flex justify-content-center align-items-center" data-target="#tab_details">About us</li>
+                            <li class="tab-nav flex justify-content-center align-items-center" data-target="#tab_venue">Our services</li>
+                            <li class="tab-nav flex justify-content-center align-items-center" data-target="#tab_organizers">Why choose us?</li>
+                        </ul>
+
+                        <div class="tabs-container mt-3">
+                            <div id="tab_details" class="tab-content">
+                                <p>About Events trolley</p>
+                            </div>
+
+                            <div id="tab_venue" class="tab-content">
+                                <p>Events trolley services</p>
+                            </div>
+
+                            <div id="tab_organizers" class="tab-content">
+                                <p>Why choose Events trolley?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <footer class="entry-footer">
+                    <a href="#" class="btn gradient-bg">Create an account</a>
+                </footer>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="homepage-featured-events">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h3 align="center" style="color:antiquewhite">GALLERY</h3>
+                <div class="featured-events-wrap flex flex-wrap justify-content-between">
+                    <div class="event-content-wrap positioning-event-1">
+                        <figure>
+                            <a href="#"><img src="/static/images/e1.jpeg" alt="events"></a>
+                        </figure>
+
+                        <header class="entry-header">
+                            <h3 class="entry-title">Event name</h3>
+
+                            <div class="posted-date">Date</div>
+                        </header>
+                    </div>
+                    
+
+                    <div class="event-content-wrap positioning-event-2">
+                        <figure>
+                            <a href="#"><img src="/static/images/e2.jpeg" alt="events"></a>
+                        </figure>
+
+                        <header class="entry-header">
+                            <h3 class="entry-title">Event name</h3>
+
+                            <div class="posted-date">Date</div>
+                        </header>
+                    </div>
+
+                    <div class="event-content-wrap positioning-event-3">
+                        <figure>
+                            <a href="#"><img src="/static/images/e4.jpeg" alt="events"></a>
+                        </figure>
+
+                        <header class="entry-header">
+                            <h3 class="entry-title">Event name</h3>
+
+                            <div class="posted-date">Date</div>
+                        </header>
+                    </div>
+
+                    <div class="event-content-wrap positioning-event-4 half">
+                        <figure>
+                            <a href="#"><img src="/static/images/e6.jpeg" alt="events"></a>
+                        </figure>
+                    </div>
+
+                    <div class="event-content-wrap positioning-event-5 half">
+                        <figure>
+                            <a href="#"><img src="/static/images/e8.jpeg" alt="events"></a>
+                        </figure>
+                    </div>
+
+                    <div class="event-content-wrap positioning-event-6 half">
+                        <figure>
+                            <a href="#"><img src="/static/images/e10.jpeg" alt="events"></a>
+                        </figure>
+                    </div>
+
+                    <div class="event-content-wrap positioning-event-7">
+                        <figure>
+                            <a href="#"><img src="/static/images/e12.jpeg" alt="events"></a>
+                        </figure>
+
+                        <header class="entry-header">
+                            <h3 class="entry-title">Event name</h3>
+
+                            <div class="posted-date">Date</div>
+                        </header>
+                    </div>
+
+                    <div class="event-content-wrap positioning-event-8">
+                        <figure>
+                            <a href="#"><img src="/static/images/e14.jpeg" alt="events"></a>
+                        </figure>
+
+                        <header class="entry-header">
+                            <h3 class="entry-title">Event name</h3>
+
+                            <div class="posted-date">Date</div>
+                        </header>
+                    </div>
+
+                    <div class="event-content-wrap positioning-event-9">
+                        <figure>
+                            <a href="#"><img src="/static/images/e16.jpeg" alt="events"></a>
+                        </figure>
+
+                        <header class="entry-header">
+                            <h3 class="entry-title">Event name</h3>
+
+                            <div class="posted-date">Date</div>
+                        </header>
+                    </div>
+
+                    <div class="event-content-wrap positioning-event-10 half">
+                        <figure>
+                            <a href="#"><img src="/static/images/e18.jpeg" alt="events"></a>
+                        </figure>
+                    </div>
+
+                    <div class="event-content-wrap positioning-event-11 half">
+                        <figure>
+                            <a href="#"><img src="/static/images/e20.jpeg" alt="events"></a>
+                        </figure>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="homepage-next-events">
+    <div class="container">
+        <div class="row">
+            <div class="next-events-section-header">
+                <h2 class="entry-title">Our next events</h2>
+                <p>Check out upcoming events.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="next-event-wrap">
+                    <figure>
+                        <a href="{{url_for('singleevent')}}"><img src="/static/images/trolleygame.jpeg" alt="1"></a>
+
+                        <div class="event-rating">8.9</div>
+                    </figure>
+
+                    <header class="entry-header">
+                        <h3 class="entry-title">Trolley games</h3>
+
+                        <div class="posted-date">Saturday <span>Jan 27, 2022</span></div>
+                    </header>
+
+                    <div class="entry-content">
+                        <p>Games, food and drinks.</p>
+                    </div>
+
+                    <footer class="entry-footer">
+                        <a href="{{url_for('singleevent')}}">Buy Tickets</a>
+                    </footer>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="next-event-wrap">
+                    <figure>
+                        <a href="{{url_for('singleevent')}}"><img src="/static/images/trolleygame.jpeg" alt="1"></a>
+
+                        <div class="event-rating">8.9</div>
+                    </figure>
+
+                    <header class="entry-header">
+                        <h3 class="entry-title">Trolley games</h3>
+
+                        <div class="posted-date">Saturday <span>Jan 27, 2022</span></div>
+                    </header>
+
+                    <div class="entry-content">
+                        <p>Games, food and drinks.</p>
+                    </div>
+
+                    <footer class="entry-footer">
+                        <a href="{{url_for('singleevent')}}">Buy Tickets</a>
+                    </footer>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="next-event-wrap">
+                    <figure>
+                        <a href="{{url_for('singleevent')}}"><img src="/static/images/trolleygame.jpeg" alt="1"></a>
+
+                        <div class="event-rating">8.9</div>
+                    </figure>
+
+                    <header class="entry-header">
+                        <h3 class="entry-title">Trolley games</h3>
+
+                        <div class="posted-date">Saturday <span>Jan 27, 2022</span></div>
+                    </header>
+
+                    <div class="entry-content">
+                        <p>Games, food and drinks.</p>
+                    </div>
+
+                    <footer class="entry-footer">
+                        <a href="{{url_for('singleevent')}}">Buy Tickets</a>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+  <!--Milestone-->
+
+  <div class="row elements-wrap">
+    <div class="col-12">
+        <header class="entry-header elements-heading">
+            <h2 align="center">Milestones</h2>
+        </header>
+
+        <div class="entry-content elements-container">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="counter-box">
+                        <div class="flex justify-content-center align-items-center">
+                            <img src="/static/images/mic-icon.png" alt="icon">
+                        </div>
+
+                        <div class="entry-content">
+                            <div class="start-counter" data-to="149" data-speed="2000">5555</div>
+
+                            <h3 class="entry-title">Events</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="counter-box">
+                        <div class="flex justify-content-center align-items-center">
+                            <img src="/static/images/bulb-icon.png" alt="icon">
+                        </div>
+
+                        <div class="entry-content">
+                            <div class="start-counter" data-to="2391" data-speed="2000">5555</div>
+
+                            <h3 class="entry-title">Tickets sold</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="counter-box">
+                        <div class="flex justify-content-center align-items-center">
+                            <img src="/static/images/diomond-icon.png" alt="icon">
+                        </div>
+
+                        <div class="entry-content">
+                            <div class="start-counter" data-to="245" data-speed="2000">5555</div>
+
+                            <h3 class="entry-title">Organisers</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="counter-box">
+                        <div class="flex justify-content-center align-items-center">
+                            <img src="/static/images/calendar-icon.png" alt="icon">
+                        </div>
+
+                        <div class="entry-content">
+                            <div class="start-counter" data-to="128" data-speed="2000">5555</div>
+
+                            <h3 class="entry-title">Calendar Events</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--End milestone-->
+
+<div class="homepage-regional-events">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <header class="regional-events-heading entry-header flex flex-wrap justify-content-between align-items-center">
+                    <h2 class="entry-title">Events in Lagos</h2>
+
+                    <div class="select-location">
+                        <select>
+                            <option>Lagos</option>
+                            <option>Ibadan</option>
+                            <option>Enugu</option>
+                        </select>
+                    </div>
+                </header>
+
+                <div class="swiper-container homepage-regional-events-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <figure>
+                                <img src="/static/images/trolleygame.jpeg" alt="eventimg">
+
+                                <a class="event-overlay-link flex justify-content-center align-items-center" href="#">+</a>
+                            </figure><!-- .hero-image -->
+
+                            <div class="entry-header">
+                                <h2 class="entry-title">Concert</h2>
+                            </div><!--- .entry-header -->
+
+                            <div class="entry-footer">
+                                <div class="posted-date">Saturday <span>Jan 27, 2022</span></div>
+                            </div><!-- .entry-footer" -->
+                        </div><!-- .swiper-slide -->
+
+                        <div class="swiper-slide">
+                            <figure>
+                                <img src="/static/images/trolleygame.jpeg" alt="eventimg">
+
+                                <a class="event-overlay-link flex justify-content-center align-items-center" href="#">+</a>
+                            </figure><!-- .hero-image -->
+
+                            <div class="entry-header">
+                                <h2 class="entry-title">Food and Drinks</h2>
+                            </div><!--- .entry-header -->
+
+                            <div class="entry-footer">
+                                <div class="posted-date">Saturday <span>Jan 27, 2022</span></div>
+                            </div><!-- .entry-footer" -->
+                        </div><!-- .swiper-slide -->
+
+                        <div class="swiper-slide">
+                            <figure>
+                                <img src="/static/images/trolleygame.jpeg" alt="eventimg">
+
+                                <a class="event-overlay-link flex justify-content-center align-items-center" href="#">+</a>
+                            </figure><!-- .hero-image -->
+
+                            <div class="entry-header">
+                                <h2 class="entry-title">Gallery Exibition</h2>
+                            </div><!--- .entry-header -->
+
+                            <div class="entry-footer">
+                                <div class="posted-date">Saturday <span>Jan 27, 2022</span></div>
+                            </div><!-- .entry-footer" -->
+                        </div><!-- .swiper-slide -->
+
+                        <div class="swiper-slide">
+                            <figure>
+                                <img src="/static/images/trolleygame.jpeg" alt="eventimg">
+
+                                <a class="event-overlay-link flex justify-content-center align-items-center" href="#">+</a>
+                            </figure><!-- .hero-image -->
+
+                            <div class="entry-header">
+                                <h2 class="entry-title">Art Gallery</h2>
+                            </div><!--- .entry-header -->
+
+                            <div class="entry-footer">
+                                <div class="posted-date">Saturday <span>Jan 27, 2022</span></div>
+                            </div><!-- .entry-footer" -->
+                        </div><!-- .swiper-slide -->
+
+                        <div class="swiper-slide">
+                            <figure>
+                                <img src="/static/images/trolleygame.jpeg" alt="eventimg">
+
+                                <a class="event-overlay-link flex justify-content-center align-items-center" href="#">+</a>
+                            </figure><!-- .hero-image -->
+
+                            <div class="entry-header">
+                                <h2 class="entry-title">Music Concert</h2>
+                            </div><!--- .entry-header -->
+
+                            <div class="entry-footer">
+                                <div class="posted-date">Saturday <span>Jan 27, 2022</span></div>
+                            </div><!-- .entry-footer" -->
+                        </div><!-- .swiper-slide -->
+
+                        <div class="swiper-slide">
+                            <figure>
+                                <img src="/static/images/trolleygame.jpeg" alt="eventimg">
+
+                                <a class="event-overlay-link flex justify-content-center align-items-center" href="#">+</a>
+                            </figure><!-- .hero-image -->
+
+                            <div class="entry-header">
+                                <h2 class="entry-title">Festival</h2>
+                            </div><!--- .entry-header -->
+
+                            <div class="entry-footer">
+                                <div class="posted-date">Saturday <span>Jan 27, 2022</span></div>
+                            </div><!-- .entry-footer" -->
+                        </div><!-- .swiper-slide -->
+
+                        <div class="swiper-slide">
+                            <figure>
+                                <img src="/static/images/trolleygame.jpeg" alt="eventimg">
+
+                                <a class="event-overlay-link flex justify-content-center align-items-center" href="#">+</a>
+                            </figure><!-- .hero-image -->
+
+                            <div class="entry-header">
+                                <h2 class="entry-title">Conference</h2>
+                            </div><!--- .entry-header -->
+
+
+                            <div class="entry-footer">
+                                <div class="posted-date">Saturday <span>Jan 27, 2022</span></div>
+                            </div><!-- .entry-footer" -->
+                        </div><!-- .swiper-slide -->
+                    </div><!-- .swiper-wrapper -->
+
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next flex justify-content-center align-items-center">
+                        <span><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1171 960q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23z"/></svg></span>
+                    </div>
+
+                    <div class="swiper-button-prev flex justify-content-center align-items-center">
+                        <span><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1203 544q0 13-10 23l-393 393 393 393q10 10 10 23t-10 23l-50 50q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23z"/></svg></span>
+                    </div>
+                </div><!-- .swiper-container -->
+
+                <div class="events-partners">
+                    <header class="entry-header">
+                        <h2 class="entry-title">Our partners</h2>
+                    </header>
+
+                    <div class="events-partners-logos flex flex-wrap justify-content-between align-items-center">
+                        <div class="event-partner-logo">
+                            <a href="#"><img src="/static/images/logoo.png" alt="partnerlogo"></a>
+                        </div>
+
+                        <div class="event-partner-logo">
+                            <a href="#"><img src="/static/images/logoo.png" alt="partnerlogo"></a>
+                        </div>
+
+                        <div class="event-partner-logo">
+                            <a href="#"><img src="/static/images/logoo.png" alt="partnerlogo"></a>
+                        </div>
+
+                        <div class="event-partner-logo">
+                            <a href="#"><img src="/static/images/logoo.png" alt="partnerlogo"></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="newsletter-subscribe">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <header class="entry-header">
+                    <h2 class="entry-title">Subscribe to our newsletter to get the latest events.</h2>
+                </header>
+
+                <div class="newsletter-form">
+                    <form class="flex flex-wrap justify-content-center align-items-center">
+                        <div class="col-md-12 col-lg-3">
+                            <input type="text" placeholder="Name">
+                        </div>
+
+                        <div class="col-md-12 col-lg-6 ms-3">
+                            <input type="email" placeholder="Your e-mail">
+                        </div>
+
+                        <div class="col-md-12 col-lg-3">
+                            <input class="btn gradient-bg" type="submit" value="Subscribe">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <figure class="footer-logo">
+                    <a href="#"><img src="/static/images/trolleylogo.png" alt="logo" width="20%"></a>
+                </figure>
+
+                <nav class="footer-navigation">
+                    <ul class="flex flex-wrap justify-content-center align-items-center">
+                        <li><a href="{{url_for('homepage')}}">Home</a></li>
+                        <li><a href="{{url_for('eventspage')}}">Events</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="{{url_for('contact')}}">Contact us</a></li>
+                        <li><a href="{{url_for('blog')}}">Event blog</a></li>
+                    </ul>
+                </nav>
+
+             
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved Events trolley.
+
+
+                <div class="footer-social">
+                    <ul class="flex flex-wrap justify-content-center align-items-center">
+                        <li><a href="#"><i class="fa-brands fa-linkedin"></i>
+                        <li><a href="#"><i class="fa-brands fa-instagram-square"></i>
+                        <li><a href="#"><i class="fa-brands fa-facebook-square"></i>
+                        <li><a href="#"><i class="fa-brands fa-twitter-square"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="back-to-top flex justify-content-center align-items-center">
+    <span><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1395 1184q0 13-10 23l-50 50q-10 10-23 10t-23-10l-393-393-393 393q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l466 466q10 10 10 23z"/></svg></span>
+</div>
+
+<script type='text/javascript' src='/static/js/jquery.js'></script>
+<script type='text/javascript' src='/static/js/masonry.pkgd.min.js'></script>
+<script type='text/javascript' src='/static/js/jquery.collapsible.min.js'></script>
+<script type='text/javascript' src='/static/js/swiper.min.js'></script>
+<script type='text/javascript' src='/static/js/jquery.countdown.min.js'></script>
+<script type='text/javascript' src='/static/js/circle-progress.min.js'></script>
+<script type='text/javascript' src='/static/js/jquery.countTo.min.js'></script>
+<script type='text/javascript' src='/static/js/custom.js'></script>
+
+</body>
+</html>
