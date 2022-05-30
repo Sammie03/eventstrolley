@@ -1,0 +1,16 @@
+{
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "..\\reactbradtraversy"
+    },
+    {
+      "path": "..\\lban-helpdesk"
+    }
+  ],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "aishatmoshood_miniprojectthree"
+  }
+}
