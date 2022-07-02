@@ -72,7 +72,7 @@ class Lga(db.Model):
     fk_state_id = db.Column(db.Integer(), db.ForeignKey("state.state_id"))
 
     #relationship
-    state_lga = db.relationship('State', back_populates ='lga_state ')
+    state_lga = db.relationship('State', back_populates ='lga_state')
     ticket_lga = db.relationship('Ticket', back_populates ='lga_ticket')
 
 
