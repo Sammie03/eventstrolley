@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>EVENTS TROLLEY</title>
+    
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="Events Trolley">
+        <meta name="keywords" content="Events, tickets, parties, hangout, team bonding, nightlife">
+    
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+    
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet"> 
+        
+        <!-- Icon Font Stylesheet -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    
+        <!-- Libraries Stylesheet -->
+        <link href="/static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="/static/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    
+        <!-- Template Stylesheet -->
+        <link href="/static/css/customer-style.css" rel="stylesheet">
+
+        <!--Sweeet Alert-->
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    </head>
+    
+    <body>
+        <div class="container-fluid position-relative d-flex p-0">
+            <!-- Spinner Start -->
+            <div id="spinner" class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+                <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+            <!-- Spinner End -->
+    
+    
+            <!-- Sign Up Start -->
+
+            <div class="container-fluid">
+                <div class="row inner-container px-0">
+                    <div class="col-lg-6 customer-register-container py-2">
+                        <div class="row px-0 justify-content-center register-inner-container">
+                            <div class="col-12 ">
+                                <div class="already-registered-container">
+                                    <p class="already-registered-text">Don't have an account?</p>
+                                    <a href="{{ url_for('register') }}" type="button" Class="already-login">Register</a>
+                                </div>
+                            </div>
+                            <div class="col-8 px-0 customer-reg-form mt-3">
+                                <div class=""><h3 class="register-text">Customer Login</h3></div>
+                                    <div class="register-container">
+                                        <p class="not-customer-text">Not a customer?</p>
+                                        <a href="#" type="button" Class="register-vendor">Login as Vendor</a>
+                                    </div>
+            
+                                <form action="{{ url_for('login') }}" method="post" class="mt-4">
+            
+                                    <input type='hidden' name='csrf_token' value="{{ csrf_token() }}"> 
+                
+            
+                                        <div class="form-outline mb-3">
+                                            <label class="form-label" for="user-email">Email address</label>
+                                            <input type="email" id="user-email" class="form-control" name="email" placeholder="example@gmail.com" required/>
+                                        </div>
+                                    
+                                        <!-- Password input -->
+                                        <div class="form-outline mb-3">
+                                            <label class="form-label" for="user-password1">Password</label>
+                                            <input type="password" id="user-password1" name="pswd" class="form-control" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                            title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="XXXXX" required/>
+                                        </div>
+                                    
+                                        <!-- Submit button -->
+                                        <div class="register-btncontainer mt-4">
+                                            <button type="submit" class="form-control btn register-btn">Login</button>
+                                        </div>
+                                    
+                    
+                                </form>
+            
+                                <div class="help-container row mt-4 justify-content-center">
+                                    <a href="#" type="button" Class="need-help-text">Forget Password?</a>
+                                </div>
+                                
+            
+                            </div>
+
+                        </div>
+                        
+        
+                        
+                    </div>
+        
+                    <div class="col-lg-6 bg-image px-0">
+                        <div class="overlay-container px-0 col-12">
+                            <div class="idea-logo-div"><img src="../../static/images/Idea-icon.png" alt="logo" width="60" class="img-fluid"></div>
+                            <div class="idea-logo-text">
+                                <p class="idea-text">Did you know? <br> You can look at a vendor's portfolio <br> to tell how good he/she is? 😇</p>
+                            </div>
+                        </div>
+                            
+                    </div>
+
+
+                </div>
+            </div>
+    
+            
+    
+            <!-- Sign In End -->
+        </div>
+
+         <!-- Flash alerts -->                
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul class=flashes>
+            {% for category, message in messages %}
+            <!-- <li class="{{ category }}">{{ message }}</li> -->
+            
+            <script type="text/javascript">
+                swal({
+                        title: "Check am",
+                        text: "{{message}}",
+                        icon: "{{category}}",
+                        button: "Close",
+                        closeOnClickOutside: false,
+                        });
+            </script>
+
+            {% endfor %}
+            </ul>
+        {% endif %}
+        {% endwith %}
+        
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="/static/lib/chart/chart.min.js"></script>
+        <script src="/static/lib/easing/easing.min.js"></script>
+        <script src="/static/lib/waypoints/waypoints.min.js"></script>
+        <script src="/static/lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="/static/lib/tempusdominus/js/moment.min.js"></script>
+        <script src="/static/lib/tempusdominus/js/moment-timezone.min.js"></script>
+        <script src="/static/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    
+        <!-- Template Javascript -->
+        <script src="/static/js/main.js"></script>
+    </body>
+    
+    </html>
