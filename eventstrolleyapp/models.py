@@ -41,11 +41,10 @@ class Vendor(db.Model):
     vendor_id = db.Column(db.Integer(), primary_key=True,autoincrement=True)
     vendor_fname = db.Column(db.String(255), nullable=False)
     vendor_lname = db.Column(db.String(255), nullable=False)
-    vendor_business_name = db.Column(db.String(255), nullable=False)
     vendor_phone = db.Column(db.String(255), nullable=False)
     vendor_email = db.Column(db.String(255), nullable=False, unique=True)
     vendor_pword = db.Column(db.String(255), nullable=False)
-    vendor_reg = db.Column(db.DateTime(), default=datetime.datetime.utcnow(), nullable=False)
+    vendor_reg = db.Column(db.DateTime(), default=datetime.datetime.utcnow())
 
     #foreignkey
     fk_location_state_id = db.Column(db.Integer(), db.ForeignKey("state.state_id"))
