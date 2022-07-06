@@ -1,0 +1,22 @@
+{
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "..\\lban-helpdesk"
+    },
+    {
+      "path": "..\\training"
+    },
+    {
+      "path": "..\\sharepoint"
+    },
+    {
+      "path": "..\\easetestproject"
+    }
+  ],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "dark_themed_admindashboard"
+  }
+}

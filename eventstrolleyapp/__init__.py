@@ -16,6 +16,6 @@ app.config.from_pyfile('config.py',silent=False)
 db = SQLAlchemy(app)
 
 #Load your routes here
-from eventstrolleyapp.routes import adminroutes, userroutes
+from eventstrolleyapp.routes import adminroutes, userroutes, vendorroutes
 from eventstrolleyapp import forms 
 from eventstrolleyapp import models
