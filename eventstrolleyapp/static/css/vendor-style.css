@@ -79,7 +79,7 @@ input[type='text'],input[type='password'],input[type='email'] {
 
 ::placeholder {
     color: #d1cfcf;
-    opacity: 1;
+    opacity: 0.3;
 }
 
 :-ms-input-placeholder { /* Internet Explorer 10-11 */

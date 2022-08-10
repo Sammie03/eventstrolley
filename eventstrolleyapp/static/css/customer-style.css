@@ -1,0 +1,202 @@
+/********** Template CSS **********/
+:root {
+    --primary: #EB1616;
+    --secondary: #191C24;
+    --light: #6C7293;
+    --dark: #000000;
+    --white: #ffffff;
+    --blue: #13133b;
+    --lightblue: rgba(48, 162, 226, 1);
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+}
+
+/*** Spinner ***/
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+/* customer-registration */
+
+.already-registered-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.already-registered-text {
+    font-family: 'inter';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    color: #828282;
+    font-style: normal;
+}
+
+.already-login {
+    font-family: 'inter';
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    color: #30A2E2;
+    font-style: normal;
+    text-decoration: none;
+    padding-left: 5px;
+}
+
+.inner-container{
+    height: 100%;
+}
+
+.form-outline label {
+	font-family: 'inter';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    color: #828282;
+    font-style: normal;
+}
+
+.form-outline input {
+    background-color: #FAFAFA;
+    border-radius: 20px;
+    height: 50px;
+}
+
+.register-text {
+    font-family: 'inter';
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    color: #30A2E2;
+    font-style: normal;
+}
+
+.register-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.not-customer-text {
+    font-family: 'inter';
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #828282;
+    font-style: normal;
+}
+
+.register-vendor {
+    font-family: 'inter';
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #30A2E2;
+    font-style: normal;
+    text-decoration: none;
+    padding-left: 5px;
+}
+
+.register-btn {
+    background:#30A2E2 !important;
+    color:#ffffff;
+    border-radius: 10px;
+    height: 50px;
+    margin-top: 15px;
+}
+
+.need-help-text {
+    font-family: 'inter';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    color: #828282;
+    font-style: normal;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* background-image */
+.bg-image {
+	background: no-repeat center center scroll;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	background-size: contain;
+	-o-background-size: contain;
+	background-image: url('/static/images/Background-Img.png');
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.overlay-container {
+    background-color: #222831;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 26.04%, rgba(0, 0, 0, 0.44) 61.98%), rgba(34, 40, 49, 0.5);
+    color:white; 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap:wrap;
+    align-content: flex-end;
+}
+
+.idea-logo-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.idea-logo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 55px;
+}
+
+.idea-text {
+    font-family: 'inter';
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #ffffff;
+    font-style: normal;
+    text-align: center;
+}
+
+/* sweet alert */
+.swal-text {
+	padding: 17px;
+	display: block;
+	margin: 22px;
+	text-align: center;
+	color: #222831;
+}
+
+.swal-button {
+	background-color: #30A2E2;;
+    border-radius: 5px;
+    color: #fff !important;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 40px;
+    display: inline-block;
+    padding: 10px 40px;
+	text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+}
