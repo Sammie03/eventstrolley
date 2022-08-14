@@ -4,13 +4,19 @@
       "path": "."
     },
     {
-      "path": "..\\reactbradtraversy"
+      "path": "..\\lban-helpdesk"
     },
     {
-      "path": "..\\lban-helpdesk"
+      "path": "..\\training"
+    },
+    {
+      "path": "..\\sharepoint"
+    },
+    {
+      "path": "..\\easetestproject"
     }
   ],
   "settings": {
-    "liveServer.settings.multiRootWorkspaceName": "aishatmoshood_miniprojectthree"
+    "liveServer.settings.multiRootWorkspaceName": "dark_themed_admindashboard"
   }
 }
