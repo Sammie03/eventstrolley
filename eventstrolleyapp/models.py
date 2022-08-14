@@ -79,6 +79,7 @@ class Lga(db.Model):
 class Tickettype(db.Model):
     tickettype_id = db.Column(db.Integer(), primary_key=True,autoincrement=True)
     tickettype__name = db.Column(db.String(255), nullable=False)
+    ticket_desc = db.Column(db.String(255), nullable=False)
     ticketprice = db.Column(db.Float(), nullable=False)
 
     #foreign key
@@ -133,7 +134,7 @@ class TicketHolder(db.Model):
 class Ticket(db.Model):
     ticket_id = db.Column(db.Integer(), primary_key=True,autoincrement=True)
     event_name = db.Column(db.String(255), nullable=False)
-    ticket_desc = db.Column(db.String(255), nullable=False)
+    event_desc = db.Column(db.String(255), nullable=False)
     event_venue = db.Column(db.String(255), nullable=False)
     venue_address = db.Column(db.String(255), nullable=False)
     event_time = db.Column(db.Time(), nullable=False)
