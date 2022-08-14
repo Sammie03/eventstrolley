@@ -17,6 +17,7 @@
     }
   ],
   "settings": {
-    "liveServer.settings.multiRootWorkspaceName": "dark_themed_admindashboard"
+    "liveServer.settings.multiRootWorkspaceName": "dark_themed_admindashboard",
+    "git.ignoreLimitWarning": true
   }
 }

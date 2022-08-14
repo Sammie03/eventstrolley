@@ -6,8 +6,6 @@ from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__, instance_relative_config=True)
 csrf=CSRFProtect(app)
 
-
-
 #Local imports starts here
 from eventstrolleyapp import config 
 app.config.from_object(config.ProductionConfig)
