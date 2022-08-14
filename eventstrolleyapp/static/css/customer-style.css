@@ -141,6 +141,7 @@
 	background-image: url('/static/images/Background-Img.png');
 	background-repeat: no-repeat;
     background-size: 100% 100%;
+    min-height: 100vh;
 }
 
 .overlay-container {
@@ -179,7 +180,7 @@
     font-style: normal;
     text-align: center;
 }
-
+ 
 /* sweet alert */
 .swal-text {
 	padding: 17px;
@@ -200,3 +201,7 @@
     padding: 10px 40px;
 	text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
 }
+
+/* #inner-container {
+    height: 800px;
+} */

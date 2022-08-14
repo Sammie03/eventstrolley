@@ -5,16 +5,37 @@ from werkzeug.security import generate_password_hash, check_password_hash
 
 from eventstrolleyapp import app,db
 from eventstrolleyapp.models import Admin, Customer, Guest, Vendor
+<<<<<<< HEAD
+
+=======
+>>>>>>> 2b9b01affba44b9e303c46c5cf137ecfe542b410
 
 
 @app.route('/')
 def homepage():
             return render_template("user/index.html")
 
-
 @app.route('/events/')
 def eventspage():
             return render_template("user/events.html")
+<<<<<<< HEAD
+        
+               
+@app.route('/single/event')
+def singleevent():
+            return render_template("user/single-event.html")
+        
+       
+@app.route('/blog/')
+def blog():
+            return render_template("user/blog.html")
+        
+        
+@app.route('/contact/')
+def contact():
+            return render_template("user/contact.html")
+    
+=======
 
 
 
@@ -36,6 +57,7 @@ def contact():
             return render_template("user/contact.html")
 
 
+>>>>>>> 2b9b01affba44b9e303c46c5cf137ecfe542b410
 
 @app.route('/register/', methods=['GET','POST'])
 def register():
@@ -52,7 +74,11 @@ def register():
         phone = request.form.get('phone')
 
         userdeets2 = userdeets = Customer.query.filter(Customer.customer_email==email).first()
+<<<<<<< HEAD
+        
+=======
 
+>>>>>>> 2b9b01affba44b9e303c46c5cf137ecfe542b410
         #validate
         if email == '' or pswd1 == '' or firstname == '' or lastname == '' or pswd2 == '':
             flash('Registration failed, kindly fill the required fields', 'warning')
@@ -73,8 +99,12 @@ def register():
             session['loggedin'] = user
             return redirect('/login')
 
+<<<<<<< HEAD
+        
+=======
 
 
+>>>>>>> 2b9b01affba44b9e303c46c5cf137ecfe542b410
 @app.route('/login/', methods=['GET','POST'])
 def login():
     user = session.get('loggedin')
@@ -84,7 +114,11 @@ def login():
     else:
         email = request.form.get('email')
         pswd = request.form.get('pswd')
+<<<<<<< HEAD
+        
+=======
 
+>>>>>>> 2b9b01affba44b9e303c46c5cf137ecfe542b410
         if email == '' or pswd == '':
             flash('Your email or password is incorrect. Please check and try and again', 'warning')
             return redirect('/login')
@@ -100,8 +134,12 @@ def login():
                 flash('Invalid login credentials', 'warning')
                 return redirect ('/')
 
+<<<<<<< HEAD
+            
+=======
 
 
+>>>>>>> 2b9b01affba44b9e303c46c5cf137ecfe542b410
 @app.route('/profile/', methods=['GET','POST'])
 def user():
     user = session.get('loggedin')
@@ -110,9 +148,14 @@ def user():
         return redirect('/login')
     else:
         return render_template ('/user/userdashboard.html', userdeets=userdeets )
+<<<<<<< HEAD
+    
+    
+=======
 
 
 
+>>>>>>> 2b9b01affba44b9e303c46c5cf137ecfe542b410
 @app.route('/logout')
 def logout():
     user = session.get('loggedin')
@@ -120,4 +163,8 @@ def logout():
         return redirect ('/')
     else:
         session.pop('loggedin')
+<<<<<<< HEAD
+        return redirect ('/')
+=======
         return redirect ('/') 
+>>>>>>> 2b9b01affba44b9e303c46c5cf137ecfe542b410
