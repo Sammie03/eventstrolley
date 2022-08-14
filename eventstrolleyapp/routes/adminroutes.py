@@ -32,6 +32,37 @@ def admindashboard():
             return redirect('/admin/login/', admindeets=admindeets)
 
 
+@app.route('/create/ticket/',methods=['GET','POST'])
+def createticket():
+    admin = session.get('admin')
+
+    if admin == None:
+         return redirect('/admin/login/') 
+    else: 
+        admindeets = Admin.query.get(admin)
+
+        if request.method == 'GET':
+            return render_template('admin/createticket.html')
+        else:
+            eventname = request.form.get('eventname')
+            eventdescription = request.form.get('eventdescription')
+            eventvenue = request.form.get('eventvenue')
+            venueaddress = request.form.get('venueaddress')
+            eventtime = request.form.get('eventtime')
+            eventstartdate = request.form.get('eventstartdate')
+            eventenddate = request.form.get('eventenddate')
+            eventcategory = request.form.get('eventcategory')
+            ticketsales_start = request.form.get('ticketsalesstartdate')
+            ticketsales_end = request.form.get('ticketsalesenddate')
+            toggle = request.form.get('tickettoggle')
+            tickettype = request.form.get('ticket_type')
+            ticketdesc = request.form.get('ticket_desc')
+            ticketprice = request.form.get('ticket_price')
+
+            ticket_image = request.files.get('ticketimage')
+            
+
+
 @app.route('/admin/logout')
 def admin_logout():
     session.pop('admin')
