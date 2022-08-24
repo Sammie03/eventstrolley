@@ -410,3 +410,95 @@ a{
     font-size: 14px;
     padding-left: 5px;
 }
+
+/* Admin Create Ticket */
+.upload-image {
+    font-family: 'Inter', sans-serif;
+    border: 2px dashed #30A2E2;
+    border-radius: 20px;
+    padding: 60px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    max-height: 300px;
+    margin-bottom: 30px;
+}
+
+.upload-image > div * {
+    margin-bottom: 2rem;
+}
+
+.ticketImg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-between;
+}
+
+.ticketImg button {
+    display: block;
+    border: none;
+    background-color: transparent;
+}
+
+input[type='file']{
+    display: none;
+}
+
+.ticketImg label{
+    color: #30A2E2;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.ticketImg label span{
+    border-bottom: 2px solid #30A2E2;
+}
+
+.upload-image small {
+    color: #BDBDBD;
+    font-size: 14px;
+}
+
+.ticket-form label{
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #30A2E2;
+    margin-bottom: .2rem;
+}
+
+.ticket-form input {
+    height: 50px;
+    background: transparent;
+    color: #828282;
+    font-size: 14px;
+    border: 0.5px solid #E0E0E0;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+}
+
+.ticket-form input::placeholder, .ticket-form input::-webkit-placeholder, .ticket-form input::-moz-placeholder {
+    font-size: 12px;
+}
+
+.ticket-form input:focus, .ticket-form input:active {
+    background: transparent;
+    color: #828282;
+    outline: 4px solid rgba(48,162,226,0.9);
+}
+
+.ticket-form input[type='button'] {
+    width: 100%;
+    height: 40px;
+    background: #30A2E2;
+    border-radius: 10px;
+    color: #fff;
+    margin-top: 1rem;
+}
+
+.ticket-form input[type='button']:hover, .ticket-form input[type='button']:focus, .ticket-form input[type='button']:active {
+    background: rgba(48,162,226,0.87);
+    outline: none;
+}
