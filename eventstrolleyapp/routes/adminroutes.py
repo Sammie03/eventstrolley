@@ -32,6 +32,14 @@ def admindashboard():
             return redirect('/admin/login/', admindeets=admindeets)
 
 
+
+@app.route('/admin/dashboard/createticket', methods=['GET','POST'])
+def admin_createticket():
+    admindeets = session.get('admin')
+    if request.method == 'GET':
+        return render_template('admin/createticket.html', admindeets=admindeets)
+
+
 @app.route('/create/ticket/',methods=['GET','POST'])
 def createticket():
     admin = session.get('admin')
@@ -61,6 +69,7 @@ def createticket():
 
             ticket_image = request.files.get('ticketimage')
             
+
 
 
 @app.route('/admin/logout')
