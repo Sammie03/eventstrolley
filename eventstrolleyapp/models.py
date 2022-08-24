@@ -129,6 +129,17 @@ class TicketHolder(db.Model):
     ticket = db.relationship('Ticket', back_populates ='ticket_holder')
 
 
+class Images(db.Model):
+    image_id = db.Column(db.Integer(), primary_key=True,autoincrement=True)
+    image = db.Column(db.String(255), nullable=False)
+    image_name = db.Column(db.String(255), nullable=False)
+    image_mimetype = db.Column(db.String(255), nullable=False)
+
+     # foreign keys
+    fk_ticket_id = db.Column(db.Integer(), db.ForeignKey("ticket.ticket_id"))
+
+    #relationship
+    ticket_image = db.relationship('Ticket', back_populates ='image_ticket')
 
 
 class Ticket(db.Model):
@@ -157,6 +168,7 @@ class Ticket(db.Model):
     lga_ticket = db.relationship('Lga', back_populates ='ticket_lga')
     categories_ticket = db.relationship('Categories', back_populates ='ticket_categories')
     ticket_holder = db.relationship('TicketHolder', back_populates ='ticket')
+    image_ticket = db.relationship('Ticket', back_populates ='ticket_image')
 
 
 class Payment(db.Model):
